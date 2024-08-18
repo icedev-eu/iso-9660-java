@@ -24,3 +24,10 @@ Example extractor:
     }
 
 `stream` does not need to be closed, it's just a wrapper over a bytebuffer with an imposed limit (and elimination of gaps between sectors). Internally the extractor uses memory mapped byte buffer to read contents of the bin/iso and it is impossible to close that resource manually. One needs to "forget" about the archive and wait for the GC cycle to do it's job.
+
+## other resources
+
+Useful resources that helped me with implementation:
+
+https://wiki.osdev.org/ISO_9660
+https://github.com/libyal/libodraw/blob/main/documentation/Optical%20disc%20RAW%20format.asciidoc
